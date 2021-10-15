@@ -1,6 +1,6 @@
 import express from 'express'
 import { success, error } from 'consola'
-import { ApolloServer, gql } from 'apollo-server-express'
+import { ApolloServer } from 'apollo-server-express'
 
 import { PORT, IN_PROD } from './config'
 import { resolvers, typeDefs } from './graphql'
