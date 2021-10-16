@@ -1,0 +1,51 @@
+query GET_JUNIORS {
+  getJuniors {
+    gender
+    firstName
+    lastName
+    address1
+    address2
+    town
+    postcode
+    school
+    dob
+    createdAt
+    updatedAt
+  }
+}
+
+mutation CREATE_JUNIOR(
+  $gender: String!
+  $firstName: String!
+  $lastName: String!
+  $address1: String!
+  $address2: String!
+  $town: String!
+  $postcode: String!
+  $school: String!
+  $dob: String!
+) {
+  createJunior(
+    newJunior: {
+      gender: $gender
+      firstName: $firstName
+      lastName: $lastName
+      address1: $address1
+      address2: $address2
+      town: $town
+      postcode: $postcode
+      school: $school
+      dob: $dob
+    }
+  ) {
+    gender
+    firstName
+    lastName
+    address1
+    address2
+    town
+    postcode
+    school
+    dob
+  }
+}
